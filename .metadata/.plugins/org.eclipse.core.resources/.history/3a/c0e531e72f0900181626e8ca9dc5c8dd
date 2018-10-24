@@ -1,0 +1,38 @@
+
+public class vigenereKnown {
+
+	public static void main(String[] args) {
+		
+		String preCipher = "MAYTHEFOURTHBEWITHYOU";
+		String keyWord = "LUKE";
+		cipher(preCipher, keyWord);
+
+	}
+	
+	public static void cipher(String preCipher, String keyWord) {
+		
+		int[] keyArray = new int[keyWord.length()];
+		int tempASCII = 0;
+		char tempLetter = ' ';
+		String postCipher = " ";
+		
+		
+		/* For-Loop converts keyword to ascii and puts each letter in a container in an array */
+		for(int i = 0; i < keyWord.length(); i++)
+			keyArray[i] = (int) keyWord.charAt(i);
+		
+		for(int i = 0; i < preCipher.length(); i++) {
+			tempASCII = (((int) preCipher.charAt(i) - 65) + (keyArray[i % keyArray.length]) - 65) % 26;
+			//if(tempASCII > )
+			tempLetter = (char) (tempASCII + 65);
+			postCipher += tempLetter;
+			tempASCII = 0;
+			tempLetter = ' ';
+		}
+		
+		System.out.println(postCipher + " <-- Generated");
+		System.out.println(" XUIXSYPSFLDLMYGMEBISF  <-- copied from project sheet");
+			
+	}
+
+}

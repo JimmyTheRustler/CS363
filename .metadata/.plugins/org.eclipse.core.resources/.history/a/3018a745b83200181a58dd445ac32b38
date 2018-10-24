@@ -1,0 +1,72 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+
+public class rainbow {
+
+	public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
+		int MAX = 10_000;
+		double ans = 0.0;
+		int[] postHash = new int[MAX];
+		int[] pin = new int[MAX];
+		int p = 0;
+		int k = 0;
+
+		//Generate pin and PostHash
+		generate(pin, postHash, MAX);
+		//Chaining
+		double correct = chaining(postHash, MAX);
+		System.out.println(correct+"");
+		ans = (correct / MAX) * 100;
+		System.out.println("Success Rate: " +  ans + "%");
+
+	}
+
+	public static double chaining(int[] postHash, int MAX) {
+		boolean found = false;
+		int p = 0;
+		int tempHash = 0;
+		int correct = 0;
+
+		for(int i = 0; i < MAX; i++) {
+			tempHash = hash(i);
+			System.out.println(tempHash+"-");
+			while(p < 100 && found == false) {
+				tempHash = hash(tempHash);
+				System.out.println(p+"p");
+				//System.out.println(postHash[i]+"---");
+				if(postHash[i] == reduce(tempHash)){
+					System.out.println(postHash[i]+" = " + reduce(tempHash));
+					found = true;
+				}
+				p++;
+
+			}
+			p = 0;
+			if(found == true) {
+				correct++;
+				found = false;
+			}
+		}
+		
+		return correct;
+		
+	}
+
+	public static void generate(int[] preHash, int[] postHash, int MAX) {
+		for(int i = 0; i < MAX; i++){
+			preHash[i] = i;
+			postHash[i] = hash(i);
+		}
+	}
+	public static int hash(int pin){
+		int top = (pin + 25 % 10000) * (pin + 25 % 10000);
+		int ans = (top / 100) % 10000;
+		return ans;
+	}
+	public static int reduce(int hash){
+		return hash;
+	}
+}

@@ -1,0 +1,86 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+
+public class rainbow {
+
+	public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
+		int MAX = 100;
+		double ans = 0.0;
+		int[] postHash = new int[MAX];
+		int[] foundPins = new int[10_000];
+		int[][] chain = new int[MAX][MAX];
+
+		//Generate Chain
+		chain = generateChain(MAX);
+
+		
+//		for (int pin = 0; pin < 10000; pin ++)
+//		{
+//			int pinHash = hash(pin);
+//			
+//			int pinFound = 
+//					
+//			if (pin == pinFound)
+//			{
+//				success++;
+//			}
+//		}
+		
+		//Compare Hash's to Chain to find a match
+		double correct = findHash(postHash, foundPins, MAX, chain);
+		ans = (correct / MAX);
+		System.out.println("Success Rate: " +  ans + "%");
+
+	}
+
+	public static double findHash(int[] postHash, int[] foundPins, int MAX, int[][] chain) {
+		int correct = 0;
+
+		for(int i = 0; i < MAX; i++){
+			for(int j = 0; j < 10_000; j++){
+				//finds correct hashes
+				if(hash(j) == chain[i][1]){
+					correct++;
+					//finds PinPrime and stores in foundPins[]
+					for(int h = 2500; h < MAX*26-1; h++){
+						foundPins[j] = hash(h);
+					}
+						
+				}
+			}
+		}
+
+		return correct;
+
+	}
+
+	public static int[][] generateChain(int MAX) {
+		
+		int[][] rainbow = new int[10000/MAX][MAX];
+		for(int i = 2500; i < MAX * 26; i++){
+			rainbow[i - 2500][0] = i;
+			int tempHash = hash(i);
+			for(int k = 1; k < MAX; k++){
+				tempHash = hash(reduce(tempHash));	
+			}
+			rainbow[i - 2500][1] = tempHash;
+		}
+		
+		return rainbow;
+
+	}
+
+	public static int hash(int pin){
+		int top = (pin + 25 % 10000) * (pin + 25 % 10000);
+		int ans = (top / 100) % 10000;
+		return ans;
+	}
+
+
+	public static int reduce(int hash){
+		return hash;
+	}
+}

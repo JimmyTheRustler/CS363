@@ -1,0 +1,41 @@
+public static double chaining(int[] postHash, int MAX) {
+		boolean found = false;
+		int p = 0;
+		int tempHash = 0;
+		int correct = 0;
+
+		for(int i = 0; i < MAX; i++) {
+			tempHash = hash(i);
+			while(p < 50 && found == false) {
+				tempHash = hash(tempHash);
+				if(postHash[i] == reduce(tempHash)){
+					found = true;
+				}
+				p++;
+
+			}
+			p = 0;
+			if(found == true) {
+				correct++;
+				found = false;
+			}
+		}
+		
+		return correct;
+		
+	}
+
+	public static void generate(int[] preHash, int[] postHash, int MAX) {
+		for(int i = 0; i < MAX; i++){
+			preHash[i] = i;
+			postHash[i] = hash(i);
+		}
+	}
+
+
+
+
+		//Generate pin and PostHash
+		generate(pin, postHash, MAX);
+		//Chaining
+		double correct = chaining(postHash, MAX);

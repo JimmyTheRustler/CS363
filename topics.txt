@@ -1,0 +1,86 @@
+
+
+Possible Security Presentation Topics
+
+
+• Trust analysis: PGP web of trust vs. trust hierarchy 
+• Techniques for generating crypto random numbers and survey of what various crypto packages use to generate random numbers 
+• Security features of various software packages: data bases, OS's (Windows, Mac OS,...) or various free UNIX: linux, freebsd,openbsd 
+• Schemes for (auto) patching OS (Windows, RedHat, MAC, Solaris) 
+• Fuzz testing network protocols 
+• Bent functions in crypto 
+• Design of S boxes 
+• Vulnerabilities revealed by traffic analysis 
+• Secure Operating System technologies (Windows, Linux, Unix, Mac OS...) 
+• Computer architectures for security 
+• Digital steganography (ascii text, mail headers, ps, html) 
+• Digital watermarks and copyrights 
+• Vulnerabilities of Java, javascript, ActiveX, Flash 
+• Java security and crypto services 
+• Techniques/algorithms for hi-speed crypto (parallel) 
+• DNS security 
+• Detecting sniffers 
+• Disk encryption products/algorithms (EFS, MAC, cfs, scramdisk, ppdd, tcfs, ...) hardware-based 
+• Immutable/append-only file systems 
+• Steganography file systems 
+• Forensic hardware and software 
+• Voice over IP vulnerabilities 
+• RFID vulnerabilities 
+• Public-key for authentication: ssh, globus, kerberos, safetp 
+• Cryptographic hashes (e.g. compare Panama to MD5, SHA) 
+• Backtracking denial-of-service attacks (spoofed source address) 
+• ISP IP-spoof tester (use Trinux/ bootable floppy) 
+• Information warfare/ cyber terrorism 
+• IPsec key management: photuris, skip, isakmp, skeme, IKE 
+• Key distribution for multicast sessions, group key management
+• ATM (asyncrhonous transfer) security 
+• Wireless security, WPA2 or WEP, mobile IP 
+• WiMAX security (802.16) metropolitan wireless, AES-CCM 
+• Cell phone security (gsm, cdpd, ORYX, ...) 
+• Bluetooth security (wireless) 
+• Data over cable (docsis) ( RSA, HMAC) 
+• Encryption in banking or e-commerce 
+• Voice over IP threat identification (VoIP) and security 
+• Electronic payment schemes (ikp, ecash, egold, ...) 
+• Email filters -- spam, viruses, trojans: content checkers (TrendMicro, AOL, etc) or verify sender ID (IBM's FairUCE) 
+• Sender policy framework (SPF) for email sender authenticity 
+• Security for data acquisition & control systmes (SCADA) and SCADA HoneyNet 
+• Security for sensor networks 
+• Security for adhoc networks 
+• Security for wireless networks 
+• Security for vehicular networks 
+• Security issues in Clouds 
+• Micropayment schemes 
+• Security of SNMP (v1 vs v3) 
+• Elliptic curves in security 
+• Compare hardware RNG (intel, amd, via, others?) 
+• Secure processors (VIA nehemiah, Cavium, DS5002FP, Trusted Platform Module (TPM)) 
+• ARM TrustZone (secure monitor) 
+• Secure cryptoprocessor 
+• Analysis of one of the other AES finalists 
+• Analysis of one of the NESSIE/CRYPTREC crypto algorithms 
+• Chaotic functions as one-time pads 
+• Secure time services (timeofday/ntp, timestamps) 
+• Compare firewall products 
+• Authorization models (capabilities, ACLs) 
+• Virtual private networks VPNs  
+• Attacking embedded systems (xbox, switches, routers, cell phone, toaster) 
+• Router or routing protocol attacks (BGP, OSPF, ...) 
+• Rootkit evolution (metasploit) 
+• SDSI or SPKI or X.509 hierarchies 
+• Https/SSL performance 
+• Survey of tests for randomness 
+• Contrast various tests for primality 
+• Compare secure file transfers (scp, sftp) 
+• Security in distributed computing (DCE, DCOM, CORBA, RMI) 
+• Crypto API's (GSS, CAPI, Java JCE, others?) 
+• Server-side vulnerabilities (CGI, php, vbasic) 
+• Analyze performance compression before encryption 
+• Automatic cryptanalysis of some hand cipher 
+• Implement and analyze of TEA or RC5
+• Electronic voting 
+• Setup secure Apache web server and certificates 
+• Setup OpenVPN testbed and test throughput 
+• Internet poker with session keys, public/private keys 
+• How to alert user to a phishing email 
+• Crypto-currency (Bitcoin, ...)

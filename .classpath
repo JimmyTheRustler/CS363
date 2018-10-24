@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="cipher/src"/>
+	<classpathentry kind="src" path="Project1/src"/>
+	<classpathentry kind="src" path="Project2/src"/>
+	<classpathentry kind="src" path="Project3/Project3/src"/>
+	<classpathentry kind="output" path="Project1/bin"/>
+</classpath>

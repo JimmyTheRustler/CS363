@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;preHash&apos; in &apos;rainbow.main(...)&apos; to &apos;pin&apos;&#x0D;&#x0A;- Original project: &apos;Project3&apos;&#x0D;&#x0A;- Original element: &apos;rainbow.main(String[]).preHash&apos;&#x0D;&#x0A;- Renamed element: &apos;preHash&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;preHash&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{rainbow.java[rainbow~main~\[QString;@preHash!376!404!382!388!\[I!0!false" name="pin" references="true" stamp="1522259716979" version="1.0"/>
+</session>

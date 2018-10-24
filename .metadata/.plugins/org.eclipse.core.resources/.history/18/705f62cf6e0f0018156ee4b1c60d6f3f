@@ -1,0 +1,46 @@
+import java.io.FileInputStream;
+
+public class LFSRCipher {
+
+	public static void main(String[] args) {
+		
+		byte fill = 255;
+		byte fill2 = 126;
+		byte fill3 = 253;
+		byte fill4 = 55;
+		//Scanner usrInput = new Scanner(System.in);
+		String usrFile = "LFSR.encrypted";
+		//System.out.print("Please enter file name: ");
+		//usrFile = usrInput.nextLine();
+		
+		
+		
+//		File f = new File(usrFile);
+//		
+//		try {
+//			FileOutputStream newBMP = new FileOutputStream(decrypted);
+//			
+//		}
+		
+		try {
+			byte[] buffer = new byte[1024];
+			FileInputStream input = new FileInputStream(usrFile);
+			
+			//debugging while loop
+			int total = 0;
+            int numRead = 0;
+			//converts binary to string to read
+            while((numRead = input.read(buffer)) != -1) {
+                System.out.println(new String(buffer));
+                total += numRead;
+            }  
+            
+            input.close();
+            System.out.println("Read " + total + " bytes");
+		}catch(FileNotFoundException ex){
+			System.out.println("File not found!");
+		}
+
+	}
+
+}

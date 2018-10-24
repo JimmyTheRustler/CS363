@@ -1,0 +1,38 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class LFSRCipher {
+
+	public static void main(String[] args) throws IOException {
+		
+		byte fill = (byte) 255;
+		byte fill2 = 126;
+		byte fill3 = (byte) 253;
+		byte fill4 = 55;
+		String usrFile = "LFSR.encrypted";
+
+		try {
+			byte[] buffer = new byte[1024];
+			FileInputStream file = new FileInputStream(usrFile);
+			
+			//debugging while loop
+			int total = 0;
+            int numRead = 0;
+			//converts binary to string to read
+            //int redIn = file.read(buffer);
+            System.out.println(buffer[100] + buffer[1] + buffer[2] + buffer[3] + buffer[4] + buffer[5] + buffer[6]);
+            /* while((numRead = file.read(buffer)) != -1) {
+                System.out.println(new String(buffer));
+                total += numRead;
+            } */ 
+            
+            file.close();
+            System.out.println("Read " + total + " bytes");
+		}catch(FileNotFoundException ex){
+			System.out.println("File not found!");
+		}
+
+	}
+
+}
